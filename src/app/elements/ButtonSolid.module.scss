@@ -1,0 +1,46 @@
+@import '../../scss/keyframes';
+@import '../../scss/mixins';
+.btn-booking {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  color: var(--color-white);
+  @include gradient(right);
+  overflow: hidden;
+  cursor: pointer;
+
+  & > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s;
+  }
+
+  &__visible {
+    padding: 2rem 7.5rem;
+  }
+
+  &__invisible {
+    position: absolute;
+    left: 0;
+    top: -100%;
+    padding: 2rem 0;
+  }
+
+  &:hover {
+    @include gradient(left);
+    animation: pulsate-box 1s infinite;
+  }
+
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+
+  &:hover &__invisible {
+    top: 0;
+    outline: none;
+  }
+}

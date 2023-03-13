@@ -1,0 +1,9 @@
+@import './../../../scss//mixins';
+.content {
+  background-color: var(--color-white);
+  display: flex;
+
+  @include responsive(medium) {
+    flex-direction: column;
+  }
+}

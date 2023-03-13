@@ -1,0 +1,21 @@
+@import './../../../scss//mixins';
+.header {
+  height: 7rem;
+  background-color: var(--color-white);
+  border-bottom: var(--borderline);
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include responsive(smaller) {
+    flex-wrap: wrap;
+    height: 12rem;
+    align-content: space-around;
+  }
+
+  .logo {
+    height: 7rem;
+    margin-left: 2rem;
+  }
+}

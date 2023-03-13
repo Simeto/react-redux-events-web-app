@@ -1,0 +1,60 @@
+@import './../../../scss/mixins';
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 40%;
+  @include responsive(smaller) {
+    order: 1;
+    flex: 0 0 100%;
+    padding: 0.7rem 0;
+  }
+  &__input {
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    background-color: var(--color-gray-light-2);
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 100px;
+    width: 90%;
+    transition: all 0.2s;
+    margin-right: -3.25rem; 
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-gray-light-3);
+      @include responsive(smaller) {
+        width: 95%;
+      }
+    }
+
+    &:focus + .search__button {
+      background-color: var(--color-gray-light-3);
+    }
+
+    &::-webkit-input-placeholder {
+      font-weight: 400;
+      color: var(--color-gray-light-4);
+    }
+  }
+
+  &__button {
+    display: flex;
+    border: none;
+    background-color: var(--color-gray-light-2);
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+    fill: var(--color-gray-dark-3);
+  }
+}

@@ -1,0 +1,70 @@
+@import './../../../scss//mixins';
+.reaction-card {
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+  z-index: 1;
+  opacity: 0.7;
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+  }
+  @include responsive(medium){
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+  &::before {
+    content: "\201C";
+    position: absolute;
+    top: -3.5rem;
+    left: -1rem;
+    font-size: 20rem;
+    line-height: 1;
+    color: var(--color-gray-light-2);
+    font-family: 'sans-serif';
+    z-index: 1;
+  }
+  &__user-text {
+    margin-bottom: 2rem;
+    z-index: 10;
+    position: relative;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+
+  &__user-photo {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+  }
+
+  &__user-box {
+    margin-right: auto;
+  }
+
+  &__user-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+
+  &__user-date {
+    font-size: 1rem;
+    color: var(--color-gray-dark-3);
+  }
+
+  &__user-rating {
+    color: var(--color-primary);
+    font-size: 2.2rem;
+    font-family: 300;
+  }
+}

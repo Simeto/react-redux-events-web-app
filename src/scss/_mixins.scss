@@ -1,0 +1,70 @@
+$screen-largest: 75em; //1200px/16px
+$screen-large: 68.75em; //1100px/16px
+$screen-medium: 56.25em; //900px/16px
+$screen-small: 37.5em; //600/16px
+$screen-smaller: 31.25em; //500/16px
+$screen-smallest: 26.9em; //430/16px
+$screen-edge: 21.6em; //345/16px
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == largest {
+    @media only screen and (max-width: $screen-largest) {
+      @content;
+    }
+  }
+  @if $breakpoint == large {
+    @media only screen and (max-width: $screen-large) {
+      @content;
+    }
+  }
+  @if $breakpoint == medium {
+    @media only screen and (max-width: $screen-medium) {
+      @content;
+    }
+  }
+  @if $breakpoint == small {
+    @media only screen and (max-width: $screen-small) {
+      @content;
+    }
+  }
+  @if $breakpoint == smaller {
+    @media only screen and (max-width: $screen-smaller) {
+      @content;
+    }
+  }
+  @if $breakpoint == smallest {
+    @media only screen and (max-width: $screen-smallest) {
+      @content;
+    }
+  }
+  @if $breakpoint == edge {
+    @media only screen and (max-width: $screen-edge) {
+      @content;
+    }
+  }
+}
+
+@mixin gradient($direction) {
+  @if $direction == left {
+    background-image: var(--gradient-left);;
+  }
+  @if $direction == right {
+    background-image: var(--gradient-right);
+  }
+  @if $direction == right-bottom {
+    background-image: var(--gradient-right-bottom);
+  }
+  @if $direction == right-bottom-transparent {
+    background-image: $gradient-right-bottom-transparent;
+  }
+  @if $direction == booking {
+    background-image: $gradient-booking;
+  }
+}
+
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

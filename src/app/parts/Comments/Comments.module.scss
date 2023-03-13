@@ -1,0 +1,14 @@
+@import "./../../../scss/mixins";
+.comments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4.5rem;
+  border-bottom: var(--borderline);
+  overflow-y: auto;
+  position: relative;
+  height: 49.5vh;
+  &__wrapper {
+    position: relative;
+  }
+}

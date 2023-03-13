@@ -1,0 +1,16 @@
+.close-modal {
+    display: inline-block;
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 3rem;
+    text-decoration: none;
+    color: var(--color-gray-dark);
+    transition: all 0.2s;
+    line-height: 1;
+    cursor: pointer;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}

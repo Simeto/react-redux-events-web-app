@@ -1,0 +1,104 @@
+@import "./../../../scss/mixins";
+@import "./../../../scss/variables";
+
+.event-card {
+  position: relative;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  height: 47rem;
+  flex: 0 1 26rem;
+  cursor: pointer;
+  &__side {
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all .8s ease;
+    backface-visibility: hidden;
+    box-shadow: var(--shadow-light-dark);
+    overflow: hidden;
+
+    &--back {
+      transform: rotateY(180deg);
+      @include gradient(right-bottom);
+    }
+  }
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  &__picture {
+    background-blend-mode: screen;
+    background-image: var(--gradient-right-bottom), url('../../../assets/event3.jfif');
+    background-size: cover;
+    height: 17rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    
+  }
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--color-white);
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    text-align: right;
+    width: 75%;
+  }
+  &__heading-text {
+    padding: 1rem 1.5rem;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    @include gradient(right-bottom-transparent);
+  }
+
+  &__details {
+    padding: 6rem 3rem 0rem 3rem;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .price-box {
+    text-align: center;
+    margin-bottom: 10rem;
+    color: var(--color-white);
+    &__text{
+      font-size: 1.4rem;
+      text-transform: uppercase;
+    }
+
+    &__amount {
+      font-size: 6rem;
+      font-weight: 100;
+    }
+  }
+
+
+}
+
+.summary {
+  list-style: none;
+  margin: 0 auto;
+  &__item {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem;
+    &:not(:last-child) {
+      border-bottom: var(--borderline);
+    }
+  }
+}
