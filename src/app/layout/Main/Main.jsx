@@ -1,16 +1,10 @@
+import {Outlet } from 'react-router-dom';
 import styles from "./Main.module.scss";
-import { Event, EventsList, EventBooking } from "../../views";
-import { EventDetails, Comments } from "../../parts";
 
 const Main = () => {
   return (
     <main className={styles.main}>
-    <Event>
-    <EventDetails />
-     {/* <Comments />  */}
-      {/* <EventBooking /> */}
-    </Event> 
-      {/* <EventsList /> */}
+      <Outlet />
     </main>
   );
 };

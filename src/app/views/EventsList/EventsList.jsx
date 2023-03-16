@@ -13,10 +13,6 @@ const EventsList = () => {
       <EventCard />
       <EventCard />
       <EventCard />
-      <EventCard />
-      <EventCard />
-      <EventCard />
-      <EventCard />
     </div>
   );
 };

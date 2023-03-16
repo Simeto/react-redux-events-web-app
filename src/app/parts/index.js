@@ -1,7 +1,7 @@
 import EventGallery from './EventGallery';
 import EventOverview from './EventOverview';
 import EventDetails from './EventDetails';
-import BookNow from './BookNow';
+import EventFooter from './EventFooter';
 import Comments from './Comments';
 import WriteComment from './WriteComment';
 
@@ -9,7 +9,7 @@ export {
   EventGallery,
   EventOverview,
   EventDetails,
-  BookNow,
+  EventFooter,
   Comments,
   WriteComment
 }

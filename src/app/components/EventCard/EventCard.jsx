@@ -30,7 +30,7 @@ const EventCard = () => {
             <div className={styles["price-box__text"]}>Only</div>
             <div className={styles["price-box__amount"]}>340$</div>
           </div>
-          <ButtonSolid />
+          <ButtonSolid to='/event/1' visibleText="Overview" invisibleText="Check details"/>
         </div>
       </div>
     </div>

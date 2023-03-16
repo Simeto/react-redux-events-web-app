@@ -1,12 +1,12 @@
-import { EventGallery, EventOverview, BookNow } from "../../parts";
+import { Outlet } from "react-router-dom";
+import { EventGallery, EventOverview } from "../../parts";
 
-const Event= ({ children }) => {
+const Event= () => {
   return (
     <>
       <EventGallery />
       <EventOverview />
-      {children}
-      <BookNow />
+      <Outlet />
     </>
   );
 };
